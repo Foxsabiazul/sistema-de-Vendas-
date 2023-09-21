@@ -6,10 +6,10 @@ package com.mycompany.modelo;
 
 /**
  *
- * @author rosa.3950
+ * @author 10156
  */
 public class VideoGame extends Produto{
-   private String plataforma;
+    private String plataforma;
 
     public VideoGame() {
     }
@@ -24,11 +24,8 @@ public class VideoGame extends Produto{
 
     @Override
     public String toString() {
-        return "Nome:" + super.getNome() + 
-                "|Preço: " + super.getNome() +
-                "|Plataforma:" + this.plataforma;
-        
+        return  "Nome: " + super.getNome() +
+                " | Preço: " + super.getPreco() +
+                " | Plataforma: " + this.plataforma;
     }
-   
-    
 }

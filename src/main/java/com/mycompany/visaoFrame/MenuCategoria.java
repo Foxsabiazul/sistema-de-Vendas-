@@ -2,21 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.visao.VideoGame;
+package com.mycompany.visaoFrame;
 
 /**
  *
- * @author rosa.3950
+ * @author jose_
  */
-    public class MenuEscolhaCategoria extends javax.swing.JFrame {
+public class MenuCategoria extends javax.swing.JFrame {
 
     /**
-     * Creates new form MenuEscolhaCategoria
+     * Creates new form MenuCategoria
      */
-    public MenuEscolhaCategoria() {
+    public MenuCategoria() {
         initComponents();
         
-        setExtendedState(MAXIMIZED_BOTH);
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -33,20 +33,18 @@ package com.mycompany.visao.VideoGame;
         btnOk = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setBackground(new java.awt.Color(51, 51, 255));
+        setTitle("Seleção de categoria");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 12)); // NOI18N
-        jLabel1.setText("Selecione a categoria que deseja Cadastrar");
+        jLabel1.setText("Selecione uma categoria:");
 
-        cbCategorias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computador ", "Video game ", "Mouse" }));
-        cbCategorias.setActionCommand("");
-        cbCategorias.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCategoriasActionPerformed(evt);
-            }
-        });
+        cbCategorias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computador", "Video game" }));
 
         btnOk.setText("Ok");
+        btnOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOkActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -55,12 +53,11 @@ package com.mycompany.visao.VideoGame;
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(cbCategorias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(157, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(btnOk)
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cbCategorias, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnOk))
+                .addContainerGap(260, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -69,7 +66,7 @@ package com.mycompany.visao.VideoGame;
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(cbCategorias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 301, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 209, Short.MAX_VALUE)
                 .addComponent(btnOk)
                 .addContainerGap())
         );
@@ -77,13 +74,24 @@ package com.mycompany.visao.VideoGame;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cbCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCategoriasActionPerformed
-     MenuEscolhaCategoria.menuEscolhaCategoria();
-     
-     menuEscolhaCategoria.setLocationRelativeTo(null);
-     menuEscolhaCategoria.setVisible(true);
-    }//GEN-LAST:event_cbCategoriasActionPerformed
-      
+    private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOkActionPerformed
+
+        switch(cbCategorias.getSelectedIndex()){
+            case 0:
+                CadastroComputador cadastroComputador = new CadastroComputador();
+                cadastroComputador.setLocationRelativeTo(null);
+                cadastroComputador.setVisible(true);
+                break;
+            case 1:
+                CadastroVideoGame cadastroVideoGame = new CadastroVideoGame();
+                cadastroVideoGame.setLocationRelativeTo(null);
+                cadastroVideoGame.setVisible(true);
+                break;
+        }
+        
+        
+    }//GEN-LAST:event_btnOkActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -101,20 +109,20 @@ package com.mycompany.visao.VideoGame;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuEscolhaCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuEscolhaCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuEscolhaCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuEscolhaCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuEscolhaCategoria().setVisible(true);
+                new MenuCategoria().setVisible(true);
             }
         });
     }

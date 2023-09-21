@@ -6,7 +6,7 @@ package com.mycompany.modelo;
 
 /**
  *
- * @author rosa.3950
+ * @author 10156
  */
 public class Computador extends Produto{
     private Double memoriaRam;
@@ -33,12 +33,9 @@ public class Computador extends Produto{
 
     @Override
     public String toString() {
-        return "Nome:" + super.getNome() + 
-               "|Preço:" + super.getPreco() + 
-               "| Memória Ram:" + this.memoriaRam + 
-               "|Processador:" +  this.processador;
-                
+        return  "Nome: " + super.getNome() + 
+                " | Preço: " + super.getPreco() +
+                " | Memória Ram: " + this.memoriaRam + 
+                " | Processador: " + this.processador;
     }
-   
-    
 }

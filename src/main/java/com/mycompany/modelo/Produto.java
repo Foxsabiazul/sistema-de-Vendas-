@@ -6,10 +6,10 @@ package com.mycompany.modelo;
 
 /**
  *
- * @author rosa.3950
+ * @author 10156
  */
 public class Produto {
-    private String nome; 
+    private String nome;
     private Double preco;
 
     public Produto() {
@@ -30,7 +30,4 @@ public class Produto {
     public void setPreco(Double preco) {
         this.preco = preco;
     }
-    
-    
-    
 }
