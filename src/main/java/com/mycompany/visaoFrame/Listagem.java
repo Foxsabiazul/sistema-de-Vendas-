@@ -33,14 +33,14 @@ public class Listagem extends javax.swing.JFrame {
             tableListagem.setModel(defaultTableModel);
 
             defaultTableModel.setRowCount(0);
-            for(int i = 0; i < ControleSistema.produtos.size(); i++){
+    for(int i = 0; i < ControleSistema.produtos.size(); i++){
                Object[] linha = new Object[defaultTableModel.getColumnCount()];
                defaultTableModel.addRow(linha);
 
-                if(ControleSistema.produtos.get(i) instanceof Computador) {
+        if(ControleSistema.produtos.get(i) instanceof Computador) {
                     tableListagem.setValueAt(((Computador) ControleSistema.produtos.get(i)).toString(), i, 0);
                     tableListagem.setValueAt("Computador", i, 1);
-                }else if(ControleSistema.produtos.get(i)instanceof VideoGame){
+            }else if(ControleSistema.produtos.get(i)instanceof VideoGame){
                     tableListagem.setValueAt(((VideoGame) ControleSistema.produtos.get(i)).toString(), i, 0);
                     tableListagem.setValueAt("Video Game", i, 1);
 
@@ -59,9 +59,9 @@ public class Listagem extends javax.swing.JFrame {
             tableListagem.setModel(defaultTableModel);
             
             defaultTableModel.setRowCount(0);
-            int linhaCont = 0;
-            for(int i = 0; i < ControleSistema.produtos.size(); i++){
-             if(ControleSistema.produtos.get(i)instanceof Computador){
+        int linhaCont = 0;
+    for(int i = 0; i < ControleSistema.produtos.size(); i++){
+        if(ControleSistema.produtos.get(i)instanceof Computador){
              Object[] linha = new Object[defaultTableModel.getRowCount()];
              defaultTableModel.addRow(linha); 
              
@@ -88,9 +88,9 @@ public class Listagem extends javax.swing.JFrame {
             tableListagem.setModel(defaultTableModel);
             
             defaultTableModel.setRowCount(0);
-            int linhaCont = 0;
-            for(int i = 0; i < ControleSistema.produtos.size(); i++){
-             if(ControleSistema.produtos.get(i)instanceof VideoGame){
+        int linhaCont = 0;
+    for(int i = 0; i < ControleSistema.produtos.size(); i++){
+        if(ControleSistema.produtos.get(i)instanceof VideoGame){
              Object[] linha = new Object[defaultTableModel.getRowCount()];
              defaultTableModel.addRow(linha); 
              
